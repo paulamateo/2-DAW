@@ -1,5 +1,14 @@
-function printMultiplicationTables() {
+//Crear metodo que pinte (mediante console.log) las tablas de multiplicar del 1 al 10
 
+function printMultiplicationTables() {
+    for (let i = 1; i <= 10; i++) {
+        let result = `Tabla del ${i}:  `;
+        for (let j = 1; j <= 10; j++) {
+            let resultMulti = i * j;
+            result += `${String(resultMulti).padStart(4, ' ')} `;
+        }
+        console.log(result);
+    }
 }
 
 printMultiplicationTables()
