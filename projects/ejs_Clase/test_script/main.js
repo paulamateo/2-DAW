@@ -1,1 +1,0 @@
-alert("hola mundo desde un alert de un fichero");
