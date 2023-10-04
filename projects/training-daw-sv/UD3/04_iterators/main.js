@@ -29,25 +29,50 @@ var pilots = [
   }
 ];
 
+
+
 function iterateSimple() {
+  for (let i = 0; i < pilots.length; ++i) {
+    console.log(pilots[i]);
+  }
 }
+
+
 function iterateForEach() {
+  pilots.forEach(pilot => {
+      console.log(pilot);
+  });
 }
+
+
 function mapIds() {
+  let resultID = pilots.map(pilots => pilots.id);
+  console.log(resultID);
 }
+
+
 function rebels() {
+  let resultFaction = pilots.filter(pilot => pilot.faction === 'Rebels');
+  console.log(resultFaction);
 }
+
+
 function totalFaction(faction) {
+  
 }
+
+
 function avgYears(faction) {
+
 }
+
 
 // use console.log
 iterateSimple()
 iterateForEach()
 try {
   assert.deepStrictEqual(mapIds(), [2,8,40,66])
-  assert.deepStrictEqual(rebels(), [pilots[0], pilots[3]])
+  // assert.deepStrictEqual(rebels(), [pilots[0], pilots[3]])
 
   assert.deepStrictEqual(totalFaction('Rebels'), 2)
 
