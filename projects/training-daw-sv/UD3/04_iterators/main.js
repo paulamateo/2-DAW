@@ -58,12 +58,12 @@ function rebels() {
 
 
 function totalFaction(faction) {
-  
+
 }
 
 
 function avgYears(faction) {
-
+  
 }
 
 
