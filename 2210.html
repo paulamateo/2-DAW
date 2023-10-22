@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargar Datos de Empleados</title>
+</head>
+<body>
+    <button id="cargarDatos">Cargar Datos</button>
+    <table id="tablaEmpleados">
+        <tr>
+            <th>Nombre</th>
+            <th>Salario</th>
+            <th>Edad</th>
+        </tr>
+    </table>
+
+    <script>
+        document.getElementById('cargarDatos').addEventListener('click', function() {
+            // Hacer la solicitud a la API
+            fetch('http://dummy.restapiexample.com/api/v1/employees')
+                .then(response => response.json())
+                .then(data => {
+                    const tabla = document.getElementById('tablaEmpleados');
+                    // Iterar sobre los empleados y agregar filas a la tabla
+                    data.forEach(empleado => {
+                        const fila = document.createElement('tr');
+                        const nombre = document.createElement('td');
+                        const salario = document.createElement('td');
+                        const edad = document.createElement('td');
+                        
+                        nombre.textContent = empleado.employee_name;
+                        salario.textContent = empleado.employee_salary;
+                        edad.textContent = empleado.employee_age;
+
+                        fila.appendChild(nombre);
+                        fila.appendChild(salario);
+                        fila.appendChild(edad);
+                        tabla.appendChild(fila);
+                    });
+                });
+        });
+    </script>
+</body>
+</html>

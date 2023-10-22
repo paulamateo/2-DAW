@@ -1,0 +1,20 @@
+.button {
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.table {
+    border: 1px solid #000;
+    border-collapse: collapse;
+    width: 60%;
+}
+
+.table thead {
+    text-align: center;
+    background-color: #cdcdcd;
+}
+
+.table th, .table td {
+    border: 1px solid #000;
+    padding: 8px;
+}
