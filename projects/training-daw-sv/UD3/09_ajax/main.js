@@ -2,18 +2,17 @@ window.onload = function() {
     console.log('document loaded');
 
     var xhttp = new XMLHttpRequest();   
+    var solicitudRealizada = false; 
 
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             var data = JSON.parse(this.responseText);
-            data.forEach(function(employee) {
+            data.data.forEach(function(employee) {
                 addRow(employee);
             });
+            solicitudRealizada = true; 
         }
     };
-
-    xhttp.open("GET", "http://dummy.restapiexample.com/api/v1/employees", true);
-    xhttp.send();
 
     function addRow(employee) {
         var table = document.getElementById('table').getElementsByTagName('tbody')[0];
@@ -21,19 +20,21 @@ window.onload = function() {
         
         var id = newRow.insertCell(0);
         var name = newRow.insertCell(1);
-        var salary = newRow.insertCell(2);
-        var age = newRow.insertCell(3);
-        var img = newRow.insertCell(4);
+        var lastname = newRow.insertCell(2);
+        var email = newRow.insertCell(3);
+        var avatar = newRow.insertCell(4);
 
         id.innerText = employee.id;
-        name.innerText = employee.employee_name;
-        salary.innerText = employee.employee_salary;
-        age.innerText = employee.employee_age;
-        img.innerHTML = `<img src="${employee.employee_img}"/>`;
+        name.innerText = employee.first_name; 
+        lastname.innerText = employee.last_name; 
+        email.innerText = employee.email;
+        avatar.innerHTML = `<img src="${employee.avatar}"/>`;
     }
 
     document.getElementById('button').addEventListener('click', function() {
-        xhttp.open("GET", "http://dummy.restapiexample.com/api/v1/employees", true);
-        xhttp.send();
+        if (!solicitudRealizada) {
+            xhttp.open("GET", "https://reqres.in/api/users", true);
+            xhttp.send();
+        }
     });
 }
