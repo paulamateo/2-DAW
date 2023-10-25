@@ -15,7 +15,7 @@ public class BankAccount {
 
     private static int accountNumber_seed = 1000;
 
-    private List<Transaction> transactions = new List<Transaction>();
+    public /*private*/ List<Transaction> transactions = new List<Transaction>();
 
     public void MakeDeposit(decimal amount, DateTime date, string note) {
         // if (amount <= 0) return;
@@ -30,7 +30,7 @@ public class BankAccount {
         transactions.Add(deposit);
     }
 
-    public void MakeWithdrawal(decimal amount, DateTime date, string note) {
+    public virtual /*sin virtual*/ void MakeWithdrawal(decimal amount, DateTime date, string note) {
        if (amount <= 0) {
             throw new ArgumentOutOfRangeException(nameof(amount), "No puede quitar un depósito negativo");
         }
@@ -41,7 +41,7 @@ public class BankAccount {
         transactions.Add(withdrawal);
     }
 
-        public BankAccount(string name) {
+    public BankAccount(string name) {
         Owner = name;
         Number = accountNumber_seed.ToString();
         accountNumber_seed++;
@@ -70,5 +70,7 @@ public class BankAccount {
         }
         return history.ToString();
     }
+
+    public virtual void PerformMonthlyOperation() { } //VIRTUAL ES PARA SOBREESCRIBIR, PARA HACER OVERRIDE
 
 }
