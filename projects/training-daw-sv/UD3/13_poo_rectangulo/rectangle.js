@@ -1,18 +1,30 @@
 class Rectangle {
 
     // add x1, y1
-    constructor(x, y) {
+    constructor(x, y, x1, y1) {
         this.x = x;
         this.y = y;
+        this.x1 = x1;
+        this.y1 = y1;
     }
 
     print() {
-        console.log(`[${this.x}, ${this.y}]`)
+        console.log(`[${this.x}, ${this.y}][${this.x1}, ${this.y1}]`)
     }
 
-    // area
+    checkInside(cx, cy) {
+        if() {
+            return true
+        }
+    }
 
-    // overlay
+    area() {
+        return this.x*this.y;
+    }
+
+    overlay() {
+
+    }
     // tenemos que comprobar la siguiente situación
     // .x----------x.....
     // .|..........|.....
@@ -23,11 +35,11 @@ class Rectangle {
     // del otro rectángulo
 }
 
-let r1 = new Rectangle(5,9);
-let r2 = new Rectangle(3,4);
+let r1 = new Rectangle(1,1,5,5);
+// let r2 = new Rectangle(3,4);
 
 r1.print()
-r2.print()
+// r2.print()
 
 // let area = r1.area();
 // console.log(`area ${area}`)
