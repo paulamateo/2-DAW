@@ -13,17 +13,12 @@ class Rectangle {
     }
 
     checkInside(cx, cy) {
-        if() {
-            return true
-        }
+        return cx > this.x && cx < this.x1 && 
+                cy > this.y && cy < this.y1
     }
 
-    area() {
-        return this.x*this.y;
-    }
-
-    overlay() {
-
+    checkOverlay(rect) {
+        return this.checkInside(rect.x, rect.y) || this.checkInside(rect.x1, rect.y1)
     }
     // tenemos que comprobar la siguiente situación
     // .x----------x.....
@@ -45,3 +40,7 @@ r1.print()
 // console.log(`area ${area}`)
 
 // let isOverlay = r1.overlay(r2)
+
+module.exports = {
+    Rectangle
+}
