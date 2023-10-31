@@ -31,6 +31,7 @@ class Coche {
     }
 }
 
+//CORRECCION OLIVER
 const coche1 = new Coche('Ferrari', 'f50', 25);
 const coche1 = new Coche('Volvo', 'XC60', 6.1);
 coche1.reposta(400);
