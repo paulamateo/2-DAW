@@ -1,0 +1,11 @@
+{
+  "name": "14_poo_dibujos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "subclass.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
