@@ -13,3 +13,18 @@ C:\Users\S2-PC00\bankapp\obj\Debug\net7.0\refint\bankapp.dll
 C:\Users\S2-PC00\bankapp\obj\Debug\net7.0\bankapp.pdb
 C:\Users\S2-PC00\bankapp\obj\Debug\net7.0\bankapp.genruntimeconfig.cache
 C:\Users\S2-PC00\bankapp\obj\Debug\net7.0\ref\bankapp.dll
+C:\Users\S2-PC00\Documents\2-DAW\NUEVO BANKAPP\bankapp\bin\Debug\net7.0\bankapp.exe
+C:\Users\S2-PC00\Documents\2-DAW\NUEVO BANKAPP\bankapp\bin\Debug\net7.0\bankapp.deps.json
+C:\Users\S2-PC00\Documents\2-DAW\NUEVO BANKAPP\bankapp\bin\Debug\net7.0\bankapp.runtimeconfig.json
+C:\Users\S2-PC00\Documents\2-DAW\NUEVO BANKAPP\bankapp\bin\Debug\net7.0\bankapp.dll
+C:\Users\S2-PC00\Documents\2-DAW\NUEVO BANKAPP\bankapp\bin\Debug\net7.0\bankapp.pdb
+C:\Users\S2-PC00\Documents\2-DAW\NUEVO BANKAPP\bankapp\obj\Debug\net7.0\bankapp.csproj.AssemblyReference.cache
+C:\Users\S2-PC00\Documents\2-DAW\NUEVO BANKAPP\bankapp\obj\Debug\net7.0\bankapp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\S2-PC00\Documents\2-DAW\NUEVO BANKAPP\bankapp\obj\Debug\net7.0\bankapp.AssemblyInfoInputs.cache
+C:\Users\S2-PC00\Documents\2-DAW\NUEVO BANKAPP\bankapp\obj\Debug\net7.0\bankapp.AssemblyInfo.cs
+C:\Users\S2-PC00\Documents\2-DAW\NUEVO BANKAPP\bankapp\obj\Debug\net7.0\bankapp.csproj.CoreCompileInputs.cache
+C:\Users\S2-PC00\Documents\2-DAW\NUEVO BANKAPP\bankapp\obj\Debug\net7.0\bankapp.dll
+C:\Users\S2-PC00\Documents\2-DAW\NUEVO BANKAPP\bankapp\obj\Debug\net7.0\refint\bankapp.dll
+C:\Users\S2-PC00\Documents\2-DAW\NUEVO BANKAPP\bankapp\obj\Debug\net7.0\bankapp.pdb
+C:\Users\S2-PC00\Documents\2-DAW\NUEVO BANKAPP\bankapp\obj\Debug\net7.0\bankapp.genruntimeconfig.cache
+C:\Users\S2-PC00\Documents\2-DAW\NUEVO BANKAPP\bankapp\obj\Debug\net7.0\ref\bankapp.dll

@@ -1,20 +1,19 @@
 ﻿using Models;
 
-Console.WriteLine("Hello, world!");
-
+Menu.Program();
 
 //CREACION CUENTA. Hacer un deposito + hacer un retiro (manejo excepciones)
-BankAccount account1 = new BankAccount("Paula", 100);
-try {
-    account1.MakeDeposit(2000, DateTime.Now, "Bus");
-    account1.MakeWithdrawal(100, DateTime.Now, "Regalo");
-    string history = account1.GetAccountHistory();
-    Console.WriteLine(history);
-} catch (ArgumentOutOfRangeException e) {
-    Console.WriteLine("Exception " +e.ToString());
-} catch (InvalidOperationException e) {
-    Console.WriteLine("Exception " +e.ToString());
-}
+// BankAccount account1 = new BankAccount("Paula", 100);
+// try {
+//     account1.MakeDeposit(2000, DateTime.Now, "Bus");
+//     account1.MakeWithdrawal(100, DateTime.Now, "Regalo");
+//     string history = account1.GetAccountHistory();
+//     Console.WriteLine(history);
+// } catch (ArgumentOutOfRangeException e) {
+//     Console.WriteLine("Exception " +e.ToString());
+// } catch (InvalidOperationException e) {
+//     Console.WriteLine("Exception " +e.ToString());
+// }
 
 // var balance = account1.Balance;
 // var stringifyAccount = account1.ToString();
@@ -24,10 +23,10 @@ try {
 
 
 //INTERESES
-BankAccount bankaccPaula = new InterestEarningAccount("Paula", 1000);
-bankaccPaula.MakeDeposit(1000, DateTime.Now, "Cumpleaños");
-bankaccPaula.PerformMonthlyOperation();
-Console.WriteLine(bankaccPaula.GetAccountHistory());
+// BankAccount bankaccPaula = new InterestEarningAccount("Paula", 1000);
+// bankaccPaula.MakeDeposit(1000, DateTime.Now, "Cumpleaños");
+// bankaccPaula.PerformMonthlyOperation();
+// Console.WriteLine(bankaccPaula.GetAccountHistory());
 
 
 
