@@ -50,9 +50,6 @@ public class BankAccount {
     public string GetBalance() {
         return $"Tienes {Balance}€ en tu cuenta, {Owner}.";
     }
-    public string GetAllAcounts() {
-        return $"{Owner}\t\t{Balance}€\t{Number}";
-    }
 
     public virtual void PerformMonthlyOperation() { }
 
@@ -85,10 +82,12 @@ public class BankAccount {
         return numberAccountsRows;
     }
 
-
-    // public string GetNumberAccount() {
-    //     return $"{Owner}\t\t{Number}";
-    // }
+    public List<string[]> GetAllAccounts() {
+        List<string[]> accountsRows = new List<string[]>();
+        string[] row = {Owner, Balance.ToString(), Number};
+        accountsRows.Add(row);
+        return accountsRows;
+    }
 
     //JSON
     public void SaveTransactionsJson() {

@@ -25,7 +25,7 @@ public class StyleCS {
     }
 
     public static void DisplayMenu() {
-        var panelMenu = new Panel("[bold]1 - Crear cuenta\n2 - Añadir dinero\n3 - Sacar dinero\n4 - Listar operaciones\n5 - Listar cuentas creadas\n6 - Salir[/]")
+        var panelMenu = new Panel("[bold]1 - Crear cuenta\n2 - Ingresar dinero\n3 - Retirar dinero\n4 - Listar transacciones\n5 - Listar cuentas creadas\n6 - Salir[/]")
         {
             Border = BoxBorder.Heavy,
             Header = new PanelHeader("[bold]MENÚ[/]"),
