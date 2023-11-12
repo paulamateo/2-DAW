@@ -4,6 +4,7 @@ namespace Models;
 public class Menu {
 
     public static void CreateNewAccount(List<BankAccount> accounts) {
+        StyleCS.Title("OPCIÓN 1 - CREACIÓN DE UNA CUENTA");
         Console.WriteLine("Nombre del propietario/a: ");
         string? owner = Console.ReadLine();
         Console.WriteLine("Depósito inicial: ");
@@ -14,8 +15,9 @@ public class Menu {
     }
 
     public static void AddMoney(List<BankAccount> accounts) {
+        StyleCS.Title("OPCIÓN 2 - INGRESAR DINERO");
         ListNumberAccounts(accounts);
-        Console.WriteLine("Nº de cuenta: ");
+        StyleCS.PrintUnderlineBold("ELIGE Nº CUENTA:");
         string? accountNumber = Console.ReadLine();
         BankAccount account = GetAccountByNumber(accounts, accountNumber);
         if (account != null) {
@@ -27,13 +29,14 @@ public class Menu {
             account.MakeDeposit(amount, date, note);
             StyleCS.PrintGreen($"Ingreso realizado. {account.GetBalance()}\n");
         } else {
-            StyleCS.PrintRed("Debes crear una cuenta antes.");
+            StyleCS.PrintRed("Debes crear una cuenta antes.\n");
         }
     }
 
     public static void RemoveMoney(List<BankAccount> accounts) {
+        StyleCS.Title("OPCIÓN 3 - RETIRAR DINERO");
         ListNumberAccounts(accounts);
-        Console.WriteLine("Nº de cuenta: ");
+        StyleCS.PrintUnderlineBold("ELIGE Nº CUENTA:");
         string? accountNumber = Console.ReadLine();
         BankAccount account = GetAccountByNumber(accounts, accountNumber);
         if (account != null) {
@@ -45,7 +48,7 @@ public class Menu {
             account.MakeWithdrawal(amount, date, note);
             StyleCS.PrintGreen($"Retiro realizado. {account.GetBalance()}\n");
         } else {
-            StyleCS.PrintRed("Debes crear una cuenta antes.");
+            StyleCS.PrintRed("Debes crear una cuenta antes.\n");
         }
     }
 
@@ -57,8 +60,9 @@ public class Menu {
     }
 
     public static void ListTransactions(List<BankAccount> accounts) {
+        StyleCS.Title("OPCIÓN 4 - TRANSACCIONES REALIZADAS");
         ListNumberAccounts(accounts);
-        Console.WriteLine("Nº de cuenta: ");
+        StyleCS.PrintUnderlineBold("ELIGE Nº CUENTA:");
         string? accNumber = Console.ReadLine();
         BankAccount acc = GetAccountByNumber(accounts, accNumber);
         if (acc != null) {
@@ -68,25 +72,35 @@ public class Menu {
                 .AddColumn ("Balance")
                 .AddColumn("Note")
             ;
-            tableTransactions.Title = new TableTitle("[underline yellow]Transacciones[/]");
+            tableTransactions.Title = new TableTitle($"\nTransacciones realizadas por la cuenta {accNumber}");
             var transactionRows = acc.GetTransactions();
             foreach (var row in transactionRows) {
                 tableTransactions.AddRow(row);
             }
             AnsiConsole.Write(tableTransactions);
+            Console.WriteLine("");
         } else {
-            StyleCS.PrintRed("Debes crear una cuenta antes.");
+            StyleCS.PrintRed("Debes crear una cuenta antes.\n");
         }
     }
 
     public static void ListNumberAccounts(List<BankAccount> accounts) {
-        Console.WriteLine("----------------------------");
-        Console.WriteLine("Propietario\tNº CUENTA");  
         foreach (var account in accounts) {
-            Console.WriteLine(account.GetNumberAccount());
+            var tableAccounts = new Table() 
+                .AddColumn ("Propietario")
+                .AddColumn ("Nº Cuenta")
+            ;        
+            tableAccounts.Title = new TableTitle("Cuentas disponibles");
+            var accountRows = account.GetNumberAccounts();
+            foreach (var row in accountRows) {
+                tableAccounts.AddRow(row);
+            }
+        AnsiConsole.Write(tableAccounts);
         }
-        Console.WriteLine("----------------------------");
     }
+
+
+
 
     public static BankAccount GetAccountByNumber(List<BankAccount> accounts, string number) {
         return accounts.FirstOrDefault(acc => acc.Number == number);
@@ -100,28 +114,28 @@ public class Menu {
                 break;
             case 2:
                 if (!accountCreated) {
-                    StyleCS.PrintRed("Debes crear una cuenta antes.");
+                    StyleCS.PrintRed("Debes crear una cuenta antes.\n");
                 }else { 
                     AddMoney(accounts);
                 }
                 break;
             case 3:
                 if (!accountCreated) {
-                    StyleCS.PrintRed("Debes crear una cuenta antes.");
+                    StyleCS.PrintRed("Debes crear una cuenta antes.\n");
                 }else { 
                     RemoveMoney(accounts);
                 }
                 break;  
             case 4:
                 if (!accountCreated) {
-                    StyleCS.PrintRed("Debes crear una cuenta antes.");
+                    StyleCS.PrintRed("Debes crear una cuenta antes.\n");
                 }else { 
                     ListTransactions(accounts);
                 }
                 break;
             case 5:
                 if (!accountCreated) {
-                    StyleCS.PrintRed("Debes crear una cuenta antes.");
+                    StyleCS.PrintRed("Debes crear una cuenta antes.\n");
                 }else { 
                     ListAccounts(accounts);
                 }
@@ -130,20 +144,9 @@ public class Menu {
                 exit = true;
                 break;
             default:
-                StyleCS.PrintRed($"La opción {option} no está en el menú.");
+                StyleCS.PrintRed($"La opción {option} no está en el menú.\n");
                 break;
         }
-    }
-
-    public static void DisplayMenu() {
-        Console.WriteLine(" ______________________________");
-        Console.WriteLine("| 1 - Crear cuenta             |");
-        Console.WriteLine("| 2 - Añadir dinero            |");
-        Console.WriteLine("| 3 - Sacar dinero             |");
-        Console.WriteLine("| 4 - Listar operaciones       |");
-        Console.WriteLine("| 5 - Listar cuentas creadas   |");
-        Console.WriteLine("| 6 - Salir                    |");
-        Console.WriteLine("|______________________________|");
     }
 
 }

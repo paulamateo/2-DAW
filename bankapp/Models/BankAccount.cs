@@ -50,9 +50,6 @@ public class BankAccount {
     public string GetBalance() {
         return $"Tienes {Balance}€ en tu cuenta, {Owner}.";
     }
-     public string GetNumberAccount() {
-        return $"{Owner}\t\t{Number}";
-    }
     public string GetAllAcounts() {
         return $"{Owner}\t\t{Balance}€\t{Number}";
     }
@@ -61,21 +58,6 @@ public class BankAccount {
 
     public override string ToString() {
         return Owner ?? "No Owner";
-    }
-
-
-    //JSON
-    public void SaveTransactionsJson() {
-        UtilsJSON.SaveJson($"{Number}.json", transactions);
-    }
-
-    public bool LoadTransactionsJson() {
-        List<Transaction> loadedTransactions = UtilsJSON.LoadJson($"{Number}.json");
-        if (loadedTransactions.Count > 0) {
-            transactions = loadedTransactions;
-            return true;
-        }
-        return false;
     }
 
     public List<string[]> GetTransactions() {
@@ -96,14 +78,30 @@ public class BankAccount {
         return transactionRows;
     }
 
-   
-}
+    public List<string[]> GetNumberAccounts() {
+        List<string[]> numberAccountsRows = new List<string[]>();
+        string[] row = {Owner, Number};
+        numberAccountsRows.Add(row);
+        return numberAccountsRows;
+    }
 
-    /*LISTAR TRANSACCIONES SIN JSON  
-    public void GetTransactions() {
-        decimal currentBalance = 0;
-        foreach (var transaction in transactions) {
-            currentBalance += transaction.Amount;
-            Console.WriteLine($"{transaction.Date.ToShortDateString()}\t{transaction.Amount}\t{currentBalance}\t{transaction.Note}");
+
+    // public string GetNumberAccount() {
+    //     return $"{Owner}\t\t{Number}";
+    // }
+
+    //JSON
+    public void SaveTransactionsJson() {
+        UtilsJSON.SaveJson($"{Number}.json", transactions);
+    }
+
+    public bool LoadTransactionsJson() {
+        List<Transaction> loadedTransactions = UtilsJSON.LoadJson($"{Number}.json");
+        if (loadedTransactions.Count > 0) {
+            transactions = loadedTransactions;
+            return true;
         }
-    }*/
+        return false;
+    }
+
+}
