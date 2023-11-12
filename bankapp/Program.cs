@@ -1,8 +1,10 @@
 ﻿using Models;
+using Spectre.Console;
 
 List<BankAccount> accounts = new List<BankAccount>();
 
-Console.WriteLine("Bienvenid@ a BANCO SAN VALERO");
+AnsiConsole.Write(StyleCS.headerProgram());
+
 bool exit = false;
 bool accountCreated = false;
 
@@ -13,6 +15,6 @@ while(!exit) {
         var option = Convert.ToInt32(Console.ReadLine());
         Menu.DisplayOptionsMenu(option, accounts, ref accountCreated, ref exit);
     }catch (FormatException) {
-        Console.WriteLine($"Error de formato. Debes introducir un carácter válido.");
+        StyleCS.PrintRed($"Error de formato. Debes introducir un carácter válido.");
     }
 }

@@ -1,50 +1,51 @@
+using Spectre.Console;
 namespace Models;
 
 public class Menu {
 
     public static void CreateNewAccount(List<BankAccount> accounts) {
         Console.WriteLine("Nombre del propietario/a: ");
-        string owner = Console.ReadLine();
+        string? owner = Console.ReadLine();
         Console.WriteLine("Depósito inicial: ");
         decimal initialDeposit = Convert.ToDecimal(Console.ReadLine());
         BankAccount newAccount = new BankAccount(owner, initialDeposit);
         accounts.Add(newAccount);
-        Console.WriteLine($"Cuenta creada. {newAccount.GetBalance()}\n");
+        StyleCS.PrintGreen($"Cuenta creada. {newAccount.GetBalance()}\n");
     }
 
     public static void AddMoney(List<BankAccount> accounts) {
         ListNumberAccounts(accounts);
         Console.WriteLine("Nº de cuenta: ");
-        string accountNumber = Console.ReadLine();
+        string? accountNumber = Console.ReadLine();
         BankAccount account = GetAccountByNumber(accounts, accountNumber);
         if (account != null) {
             Console.WriteLine("Cantidad que quieres ingresar: ");
             decimal amount = Convert.ToDecimal(Console.ReadLine());
             Console.WriteLine("Descripción: ");
-            string note = Console.ReadLine();
+            string? note = Console.ReadLine();
             DateTime date = DateTime.Now;
             account.MakeDeposit(amount, date, note);
-            Console.WriteLine($"Ingreso realizado. {account.GetBalance()}\n");
+            StyleCS.PrintGreen($"Ingreso realizado. {account.GetBalance()}\n");
         } else {
-            Console.WriteLine("Esa cuenta no existe.");
+            StyleCS.PrintRed("Debes crear una cuenta antes.");
         }
     }
 
     public static void RemoveMoney(List<BankAccount> accounts) {
         ListNumberAccounts(accounts);
         Console.WriteLine("Nº de cuenta: ");
-        string accountNumber = Console.ReadLine();
+        string? accountNumber = Console.ReadLine();
         BankAccount account = GetAccountByNumber(accounts, accountNumber);
         if (account != null) {
             Console.WriteLine("Cantidad que quieres retirar: ");
             decimal amount = Convert.ToDecimal(Console.ReadLine());
             Console.WriteLine("Descripción: ");
-            string note = Console.ReadLine();
+            string? note = Console.ReadLine();
             DateTime date = DateTime.Now;
             account.MakeWithdrawal(amount, date, note);
-            Console.WriteLine($"Retiro realizado. {account.GetBalance()}\n");
+            StyleCS.PrintGreen($"Retiro realizado. {account.GetBalance()}\n");
         } else {
-            Console.WriteLine("Esa cuenta no existe.");
+            StyleCS.PrintRed("Debes crear una cuenta antes.");
         }
     }
 
@@ -58,13 +59,23 @@ public class Menu {
     public static void ListTransactions(List<BankAccount> accounts) {
         ListNumberAccounts(accounts);
         Console.WriteLine("Nº de cuenta: ");
-        string accNumber = Console.ReadLine();
+        string? accNumber = Console.ReadLine();
         BankAccount acc = GetAccountByNumber(accounts, accNumber);
         if (acc != null) {
-            Console.WriteLine("Date\t\tAmount\tBalance\tNote");
-            acc.GetTransactions();
+            var tableTransactions = new Table ()
+                .AddColumn ("Date")
+                .AddColumn ("Amount")
+                .AddColumn ("Balance")
+                .AddColumn("Note")
+            ;
+            tableTransactions.Title = new TableTitle("[underline yellow]Transacciones[/]");
+            var transactionRows = acc.GetTransactions();
+            foreach (var row in transactionRows) {
+                tableTransactions.AddRow(row);
+            }
+            AnsiConsole.Write(tableTransactions);
         } else {
-            Console.WriteLine("No se encontró la cuenta.");
+            StyleCS.PrintRed("Debes crear una cuenta antes.");
         }
     }
 
@@ -89,28 +100,28 @@ public class Menu {
                 break;
             case 2:
                 if (!accountCreated) {
-                    Console.WriteLine("Debes crear una cuenta antes.");
+                    StyleCS.PrintRed("Debes crear una cuenta antes.");
                 }else { 
                     AddMoney(accounts);
                 }
                 break;
             case 3:
                 if (!accountCreated) {
-                    Console.WriteLine("Debes crear una cuenta antes.");
+                    StyleCS.PrintRed("Debes crear una cuenta antes.");
                 }else { 
                     RemoveMoney(accounts);
                 }
                 break;  
             case 4:
                 if (!accountCreated) {
-                    Console.WriteLine("Debes crear una cuenta antes.");
+                    StyleCS.PrintRed("Debes crear una cuenta antes.");
                 }else { 
                     ListTransactions(accounts);
                 }
                 break;
             case 5:
                 if (!accountCreated) {
-                    Console.WriteLine("Debes crear una cuenta antes.");
+                    StyleCS.PrintRed("Debes crear una cuenta antes.");
                 }else { 
                     ListAccounts(accounts);
                 }
@@ -119,7 +130,7 @@ public class Menu {
                 exit = true;
                 break;
             default:
-                Console.WriteLine($"La opción {option} no está en el menú.");
+                StyleCS.PrintRed($"La opción {option} no está en el menú.");
                 break;
         }
     }

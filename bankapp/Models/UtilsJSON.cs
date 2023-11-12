@@ -4,7 +4,7 @@ namespace Models;
 
 public class UtilsJSON {
 
-    private static readonly string folderName = "ACCOUNTS_CREATED";
+    private static readonly string folderName = "ACC_CREATED_TRANSACTIONS";
 
     public static void SaveJson(string fileName, List<Transaction> transactions) { 
         try {
@@ -14,7 +14,7 @@ public class UtilsJSON {
             string json = JsonSerializer.Serialize(transactions, options);
             File.WriteAllText(fullPath, json);
         }catch (Exception e) {
-            Console.WriteLine($"Error: {e.Message}");
+            StyleCS.PrintRed($"Error: {e.Message}");
         }
     } 
 
@@ -25,9 +25,9 @@ public class UtilsJSON {
             List<Transaction>? loadedTransactions = JsonSerializer.Deserialize<List<Transaction>>(json);
             return loadedTransactions;
         } catch (FileNotFoundException) {
-            Console.WriteLine($"El archivo {fileName} no existe.");
+            StyleCS.PrintRed($"El archivo {fileName} no existe.");
         } catch (Exception e) {
-            Console.WriteLine($"Error al cargar las transacciones: {e.Message}");
+            StyleCS.PrintRed($"Error al cargar las transacciones: {e.Message}");
         }
         return new List<Transaction>();
     }

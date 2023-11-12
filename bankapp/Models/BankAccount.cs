@@ -1,4 +1,5 @@
 using System.Text.Json;
+using Spectre.Console;
 
 namespace Models;
 
@@ -77,15 +78,26 @@ public class BankAccount {
         return false;
     }
 
-    public void GetTransactions() {
+    public List<string[]> GetTransactions() {
+        List<string[]> transactionRows = new List<string[]>();
         if (LoadTransactionsJson()) {
             decimal currentBalance = 0;
             foreach (var transaction in transactions) {
                 currentBalance += transaction.Amount;
-                Console.WriteLine($"{transaction.Date.ToShortDateString()}\t{transaction.Amount}\t{currentBalance}\t{transaction.Note}");
+                string[] row = {
+                    transaction.Date.ToShortDateString(),
+                    transaction.Amount.ToString(),
+                    currentBalance.ToString(),
+                    transaction.Note
+                };
+                transactionRows.Add(row);
             }
         }
+        return transactionRows;
     }
+
+   
+}
 
     /*LISTAR TRANSACCIONES SIN JSON  
     public void GetTransactions() {
@@ -95,5 +107,3 @@ public class BankAccount {
             Console.WriteLine($"{transaction.Date.ToShortDateString()}\t{transaction.Amount}\t{currentBalance}\t{transaction.Note}");
         }
     }*/
-    
-}
