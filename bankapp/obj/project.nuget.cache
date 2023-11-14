@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "AluK7sE/c/0yQz2bTLWejF0N/77XwiRjgUn1qUNLVC1UIm6Ubdyv4+jpJEqZ5NpgfkRZ8WT9IDGNPjMpXxWSRA==",
+  "dgSpecHash": "3n32vRkbr7dFDzZTwgHTOLaX2PnoxaF5MBi0uRfCOT9KbJV9Lx65Cg0figQAfdNoAB7ERmVXXHfubgkf77j11w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\paula\\Documents\\2-DAW\\bankapp\\bankapp.csproj",
+  "projectFilePath": "C:\\Users\\S2-PC00\\Documents\\2-DAW\\bankapp\\bankapp.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\paula\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
-    "C:\\Users\\paula\\.nuget\\packages\\spectre.console\\0.47.0\\spectre.console.0.47.0.nupkg.sha512",
-    "C:\\Users\\paula\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512"
+    "C:\\Users\\S2-PC00\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\S2-PC00\\.nuget\\packages\\spectre.console\\0.47.0\\spectre.console.0.47.0.nupkg.sha512",
+    "C:\\Users\\S2-PC00\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512"
   ],
   "logs": []
 }

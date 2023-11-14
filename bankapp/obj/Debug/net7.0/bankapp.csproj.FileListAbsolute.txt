@@ -93,3 +93,6 @@ C:\Users\paula\Documents\2-DAW\bankapp\obj\Debug\net7.0\bankapp.pdb
 C:\Users\paula\Documents\2-DAW\bankapp\obj\Debug\net7.0\bankapp.genruntimeconfig.cache
 C:\Users\paula\Documents\2-DAW\bankapp\obj\Debug\net7.0\ref\bankapp.dll
 C:\Users\paula\Documents\2-DAW\bankapp\bin\Debug\net7.0\Spectre.Console.dll
+C:\Users\S2-PC00\Documents\2-DAW\bankapp\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\S2-PC00\Documents\2-DAW\bankapp\bin\Debug\net7.0\Spectre.Console.dll
+C:\Users\S2-PC00\Documents\2-DAW\bankapp\obj\Debug\net7.0\bankapp.csproj.CopyComplete

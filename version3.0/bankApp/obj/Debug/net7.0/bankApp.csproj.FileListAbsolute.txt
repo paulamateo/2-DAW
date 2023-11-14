@@ -1,0 +1,17 @@
+C:\Users\S2-PC00\bankApp\bin\Debug\net7.0\bankApp.exe
+C:\Users\S2-PC00\bankApp\bin\Debug\net7.0\bankApp.deps.json
+C:\Users\S2-PC00\bankApp\bin\Debug\net7.0\bankApp.runtimeconfig.json
+C:\Users\S2-PC00\bankApp\bin\Debug\net7.0\bankApp.dll
+C:\Users\S2-PC00\bankApp\bin\Debug\net7.0\bankApp.pdb
+C:\Users\S2-PC00\bankApp\bin\Debug\net7.0\Spectre.Console.dll
+C:\Users\S2-PC00\bankApp\obj\Debug\net7.0\bankApp.csproj.AssemblyReference.cache
+C:\Users\S2-PC00\bankApp\obj\Debug\net7.0\bankApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\S2-PC00\bankApp\obj\Debug\net7.0\bankApp.AssemblyInfoInputs.cache
+C:\Users\S2-PC00\bankApp\obj\Debug\net7.0\bankApp.AssemblyInfo.cs
+C:\Users\S2-PC00\bankApp\obj\Debug\net7.0\bankApp.csproj.CoreCompileInputs.cache
+C:\Users\S2-PC00\bankApp\obj\Debug\net7.0\bankApp.csproj.CopyComplete
+C:\Users\S2-PC00\bankApp\obj\Debug\net7.0\bankApp.dll
+C:\Users\S2-PC00\bankApp\obj\Debug\net7.0\refint\bankApp.dll
+C:\Users\S2-PC00\bankApp\obj\Debug\net7.0\bankApp.pdb
+C:\Users\S2-PC00\bankApp\obj\Debug\net7.0\bankApp.genruntimeconfig.cache
+C:\Users\S2-PC00\bankApp\obj\Debug\net7.0\ref\bankApp.dll
