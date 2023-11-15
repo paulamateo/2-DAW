@@ -24,6 +24,28 @@ public class StyleCS {
         AnsiConsole.Write(titleOption);
     }
 
+    public static void CreateTableTransactions(int accNumber, BankAccount acc) {
+        var tableTransactions = new Table()
+            .AddColumn("Date")
+            .AddColumn("Amount")
+            .AddColumn("Balance")
+            .AddColumn("Note")
+            .Title($"\nTransacciones realizadas por la cuenta {accNumber}")
+        ;
+        var transactionRows = acc.GetTransactions();
+        foreach (var row in transactionRows) {
+            tableTransactions.AddRow(row);
+        }
+        AnsiConsole.Write(tableTransactions);
+        Console.WriteLine("");
+    }
+
+
+
+            
+
+
+
     public static void DisplayMenu() {
         var panelMenu = new Panel("[bold]1 - Crear cuenta\n2 - Ingresar dinero\n3 - Retirar dinero\n4 - Listar transacciones\n5 - Listar cuentas creadas\n6 - Salir[/]")
         {

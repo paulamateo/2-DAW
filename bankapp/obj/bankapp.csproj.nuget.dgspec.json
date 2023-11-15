@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\S2-PC00\\Documents\\2-DAW\\version3.0\\bankApp\\bankApp.csproj": {}
+    "D:\\PAULA\\EJERCICIO BANCO\\bankapp\\bankapp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\S2-PC00\\Documents\\2-DAW\\version3.0\\bankApp\\bankApp.csproj": {
+    "D:\\PAULA\\EJERCICIO BANCO\\bankapp\\bankapp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\S2-PC00\\Documents\\2-DAW\\version3.0\\bankApp\\bankApp.csproj",
-        "projectName": "bankApp",
-        "projectPath": "C:\\Users\\S2-PC00\\Documents\\2-DAW\\version3.0\\bankApp\\bankApp.csproj",
+        "projectUniqueName": "D:\\PAULA\\EJERCICIO BANCO\\bankapp\\bankapp.csproj",
+        "projectName": "bankapp",
+        "projectPath": "D:\\PAULA\\EJERCICIO BANCO\\bankapp\\bankapp.csproj",
         "packagesPath": "C:\\Users\\S2-PC00\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\S2-PC00\\Documents\\2-DAW\\version3.0\\bankApp\\obj\\",
+        "outputPath": "D:\\PAULA\\EJERCICIO BANCO\\bankapp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

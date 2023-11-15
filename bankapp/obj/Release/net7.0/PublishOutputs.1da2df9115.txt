@@ -1,0 +1,6 @@
+C:\Users\S2-PC00\bankapp\bin\Release\net7.0\publish\bankapp.exe
+C:\Users\S2-PC00\bankapp\bin\Release\net7.0\publish\bankapp.dll
+C:\Users\S2-PC00\bankapp\bin\Release\net7.0\publish\bankapp.deps.json
+C:\Users\S2-PC00\bankapp\bin\Release\net7.0\publish\bankapp.runtimeconfig.json
+C:\Users\S2-PC00\bankapp\bin\Release\net7.0\publish\bankapp.pdb
+C:\Users\S2-PC00\bankapp\bin\Release\net7.0\publish\Spectre.Console.dll

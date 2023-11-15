@@ -58,20 +58,21 @@ public class Menu {
         StyleCS.PrintUnderlineBold("ELIGE Nº CUENTA:");
         string? accNumber = Console.ReadLine();
         BankAccount acc = GetAccountByNumber(accounts, accNumber);
+        
         if (acc != null) {
-            var tableTransactions = new Table ()
-                .AddColumn ("Date")
-                .AddColumn ("Amount")
-                .AddColumn ("Balance")
-                .AddColumn("Note")
-                .Title($"\nTransacciones realizadas por la cuenta {accNumber}")
-            ;
-            var transactionRows = acc.GetTransactions();
-            foreach (var row in transactionRows) {
-                tableTransactions.AddRow(row);
-            }
-            AnsiConsole.Write(tableTransactions);
-            Console.WriteLine("");
+            // var tableTransactions = new Table ()
+            //     .AddColumn ("Date")
+            //     .AddColumn ("Amount")
+            //     .AddColumn ("Balance")
+            //     .AddColumn("Note")
+            //     .Title($"\nTransacciones realizadas por la cuenta {accNumber}")
+            // ;
+            // var transactionRows = acc.GetTransactions();
+            // foreach (var row in transactionRows) {
+            //     tableTransactions.AddRow(row);
+            // }
+            // AnsiConsole.Write(tableTransactions);
+            // Console.WriteLine("");
         } else {
             StyleCS.PrintRed($"La cuenta {accNumber} no existe.\n");
         }
@@ -149,6 +150,7 @@ public class Menu {
                 }
                 break; 
             case 6:
+                UtilsJSON.DeleteJSONFolder();
                 exit = true;
                 break;
             default:

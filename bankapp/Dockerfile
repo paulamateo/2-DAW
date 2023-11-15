@@ -1,5 +1,5 @@
 FROM mcr.microsoft.com/dotnet/sdk:7.0
-WORKDIR /src
+WORKDIR /bankapp
 COPY . .
-RUN dotnet publish "MyApi/bankapp.csproj" -c Release -o /app
+RUN dotnet publish "bankapp.csproj" -c Release -o /app
 ENTRYPOINT [ "dotnet", "bankapp.dll" ]

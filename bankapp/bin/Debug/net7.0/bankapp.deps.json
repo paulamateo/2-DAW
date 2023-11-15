@@ -6,12 +6,12 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v7.0": {
-      "bankApp/1.0.0": {
+      "bankapp/1.0.0": {
         "dependencies": {
           "Spectre.Console": "0.47.0"
         },
         "runtime": {
-          "bankApp.dll": {}
+          "bankapp.dll": {}
         }
       },
       "Spectre.Console/0.47.0": {
@@ -29,7 +29,7 @@
     }
   },
   "libraries": {
-    "bankApp/1.0.0": {
+    "bankapp/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

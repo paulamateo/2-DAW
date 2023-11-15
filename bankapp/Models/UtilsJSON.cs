@@ -23,12 +23,16 @@ public class UtilsJSON {
             string json = File.ReadAllText(fullPath);
             List<Transaction>? loadedTransactions = JsonSerializer.Deserialize<List<Transaction>>(json);
             return loadedTransactions;
-        } catch (FileNotFoundException) {
+        }catch (FileNotFoundException) {
             StyleCS.PrintRed($"El archivo {fileName} no existe.");
-        } catch (Exception e) {
+        }catch (Exception e) {
             StyleCS.PrintRed($"Error al cargar las transacciones: {e.Message}");
         }
         return new List<Transaction>();
+    }
+
+    public static void DeleteJSONFolder() {
+        Directory.Delete(folderName, true);
     }
     
 }

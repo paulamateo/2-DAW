@@ -72,6 +72,16 @@ public class BankAccount {
         return transactionRows;
     }
 
+    
+    // public void GetTransactions() {
+    //     decimal currentBalance = 0;
+    //     foreach (var transaction in transactions) {
+    //         currentBalance += transaction.Amount;
+    //         Console.WriteLine($"{transaction.Date.ToShortDateString()}\t{transaction.Amount}\t{currentBalance}\t{transaction.Note}");
+    //     }
+    // }
+
+
     public List<string[]> GetNumberAccounts() {
         List<string[]> numberAccountsRows = new List<string[]>();
         string[] row = {Owner, Number};

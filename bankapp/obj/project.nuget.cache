@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/D8Cc97rsXU+V7ADSPtLC1bXdgPiixyyL39LT35LVkzCG8h8C/tWfcRF6gxsAKLomrjXNNq70lobrXts7WGOOA==",
+  "dgSpecHash": "9G/IlBXgS1sihx5tklZnpqmrTvTZC4+kbqdvsH98x62QfM1DaTafouzIDVQRQYHXsSMYHWhRBSIQaJLhsQVvDw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\S2-PC00\\Documents\\2-DAW\\version3.0\\bankApp\\bankApp.csproj",
+  "projectFilePath": "D:\\PAULA\\EJERCICIO BANCO\\bankapp\\bankapp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\S2-PC00\\.nuget\\packages\\spectre.console\\0.47.0\\spectre.console.0.47.0.nupkg.sha512",
     "C:\\Users\\S2-PC00\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512"
