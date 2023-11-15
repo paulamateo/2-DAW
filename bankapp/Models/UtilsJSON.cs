@@ -1,10 +1,9 @@
-// using Newtonsoft.Json;
 using System.Text.Json;
 namespace Models;
 
 public class UtilsJSON {
 
-    private static readonly string folderName = "ACC_CREATED_TRANSACTIONS";
+    private static readonly string folderName = "TRANSACTIONS";
 
     public static void SaveJson(string fileName, List<Transaction> transactions) { 
         try {

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\S2-PC00\\Documents\\2-DAW\\bankapp\\bankapp.csproj": {}
+    "C:\\Users\\S2-PC00\\Documents\\2-DAW\\version3.0\\bankApp\\bankApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\S2-PC00\\Documents\\2-DAW\\bankapp\\bankapp.csproj": {
+    "C:\\Users\\S2-PC00\\Documents\\2-DAW\\version3.0\\bankApp\\bankApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\S2-PC00\\Documents\\2-DAW\\bankapp\\bankapp.csproj",
-        "projectName": "bankapp",
-        "projectPath": "C:\\Users\\S2-PC00\\Documents\\2-DAW\\bankapp\\bankapp.csproj",
+        "projectUniqueName": "C:\\Users\\S2-PC00\\Documents\\2-DAW\\version3.0\\bankApp\\bankApp.csproj",
+        "projectName": "bankApp",
+        "projectPath": "C:\\Users\\S2-PC00\\Documents\\2-DAW\\version3.0\\bankApp\\bankApp.csproj",
         "packagesPath": "C:\\Users\\S2-PC00\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\S2-PC00\\Documents\\2-DAW\\bankapp\\obj\\",
+        "outputPath": "C:\\Users\\S2-PC00\\Documents\\2-DAW\\version3.0\\bankApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,10 +44,6 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[13.0.3, )"
-            },
             "Spectre.Console": {
               "target": "Package",
               "version": "[0.47.0, )"

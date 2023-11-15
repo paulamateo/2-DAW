@@ -7,5 +7,5 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = bankapp
-build_property.ProjectDir = C:\Users\S2-PC00\Documents\2-DAW\bankapp\
+build_property.RootNamespace = bankApp
+build_property.ProjectDir = C:\Users\S2-PC00\Documents\2-DAW\version3.0\bankApp\

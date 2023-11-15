@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("bankapp")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("bankApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("bankapp")]
-[assembly: System.Reflection.AssemblyTitleAttribute("bankapp")]
+[assembly: System.Reflection.AssemblyProductAttribute("bankApp")]
+[assembly: System.Reflection.AssemblyTitleAttribute("bankApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Generado por la clase WriteCodeFragment de MSBuild.

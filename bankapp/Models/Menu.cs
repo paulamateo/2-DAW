@@ -89,7 +89,7 @@ public class Menu {
                 tableAccounts.AddRow(row);
             }
         }
-        AnsiConsole.Render(tableAccounts);
+        AnsiConsole.Write(tableAccounts);
     }
 
     public static void ListAccounts(List<BankAccount> accounts) {
@@ -106,7 +106,7 @@ public class Menu {
                 tableAllAccounts.AddRow(row);
             }
         }
-        AnsiConsole.Render(tableAllAccounts);
+        AnsiConsole.Write(tableAllAccounts);
         Console.WriteLine("");
     }
 
