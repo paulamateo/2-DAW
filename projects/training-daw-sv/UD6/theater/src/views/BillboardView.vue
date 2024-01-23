@@ -1,0 +1,3 @@
+<template>
+    Vista BillboardView
+</template>
